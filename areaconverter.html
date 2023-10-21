@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Converter</title>
+<style>
+body{
+    padding:50px 100px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+form{
+    font-size: 25px;
+    font-family: Cambria;
+    text-align: center;
+    background-color: rgb(81, 205, 195);
+    border-radius: 200px;
+}
+
+.inp{
+    padding: 5px 5px;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+button{
+    font-size: large;
+    color: rgb(53, 98, 94);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 30px;
+    padding:8px 10px;
+}
+
+#mess{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    align-items: center;
+    font-size: 40px;
+
+}
+
+
+</style>
+
+
+</head>
+<body>
+    
+    <form  onsubmit="dosum(event)" align="center">
+        <h1 align="center">Area Converter</h1>
+        Enter  Marla &nbsp;&nbsp;
+        <div id="continer"></div><input type="number" placeholder="Only Number Pass" id="marla" class="inp"required/ ><br><br></div>
+        <button type="submit">Convert Marla</button>
+        <hr width="500em" color="pink">
+    
+
+    </form>
+    <h3 id="mess" align="center">Show The Result</h3>
+    <hr width="500em" color="green">
+    <script>
+        function dosum(event){
+
+            console.log("Button Active!");
+            event.preventDefault();
+            let Area = document.querySelector("#marla").value;
+            let Sfeet= 272.25;
+            console.log(Area);
+            console.log(Sfeet);
+
+            let result = Number(Area)*Number(Sfeet);
+            console.log(result);
+
+            let message="Your total " +Area+" Marla or Area Convert in  "+ result+" Square Feets";
+            document.querySelector("#mess").innerHTML=message;
+
+        
+        }
+        
+        
+        </script>
+
+
+        
+
+
+</body>
+</html>
